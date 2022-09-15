@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница.
+{% endblock %}
+
+{% block content %}
+    <h1> Тестовый записи: </h1>
+    {% for item in items %}
+        <a href="{% url 'main:item' item.id %}">Ссылка на тестовый объект: {{ item.name }}</a>
+    {% endfor %}
+{% endblock %}
